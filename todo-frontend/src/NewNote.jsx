@@ -72,7 +72,7 @@ function NewNote() {
             variant="contained"
             fullWidth
             onClick={() => {
-              fetch("taskivist-api.vercel.app/notes", {
+              fetch("https://taskivist.onrender.com/notes", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
