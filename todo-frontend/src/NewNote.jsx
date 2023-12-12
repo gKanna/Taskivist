@@ -83,7 +83,7 @@ function NewNote() {
                 resp.json().then((data) => {
                   console.log(data);
                   alert("Note Added successfully");
-                  window.location.reload();
+                  navigate("/")
                 });
               });
             }}
