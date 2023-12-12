@@ -66,7 +66,7 @@ function NewTodo() {
             variant="contained"
             fullWidth
             onClick={() => {
-              fetch("http://localhost:3000/todos", {
+              fetch("taskivist-api.vercel.app/todos", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
