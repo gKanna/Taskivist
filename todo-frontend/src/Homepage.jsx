@@ -22,10 +22,9 @@ export function Homepage() {
           <Card
             sx={{ color: "#EEE7DA" }}
             style={{
-              marginTop: "100px",
-              marginLeft: "100px",
-              width: "600px",
-              backdropfilter: blur("8px"),
+               marginTop: "50px",
+                marginLeft: "60px",
+                marginRight: "50px",
             }}
           >
             <div
@@ -54,10 +53,9 @@ export function Homepage() {
         <Grid item xs={12} md={6}>
           <Card
             style={{
-              marginTop: "100px",
-              marginLeft: "100px",
-              width: "600px",
-              backdropfilter: blur("8px"),
+              marginTop: "50px",
+                marginLeft: "60px",
+                marginRight: "50px",
             }}
           >
             <div
