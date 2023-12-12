@@ -72,7 +72,7 @@ function NewNote() {
             variant="contained"
             fullWidth
             onClick={() => {
-              fetch("http://localhost:3000/notes", {
+              fetch("taskivist-api.vercel.app/notes", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
