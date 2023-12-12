@@ -18,7 +18,7 @@ export function EditNote() {
   });
   let { noteid } = useParams();
   useEffect(() => {
-    fetch("taskivist-api.vercel.app/notes/" + noteid, { method: "GET" }).then(
+    fetch("https://taskivist.onrender.com//notes/" + noteid, { method: "GET" }).then(
       (resp) => {
         {
           resp.json().then((data) => {
@@ -75,7 +75,7 @@ export function EditNote() {
                 <StyledButton
                   variant="contained"
                   onClick={() => {
-                    fetch("taskivist-api.vercel.app/notes/" + props.note.id, {
+                    fetch("https://taskivist.onrender.com/notes/" + props.note.id, {
                       method: "PUT",
                       headers: {
                         "Content-Type": "application/json",
