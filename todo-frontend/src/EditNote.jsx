@@ -18,7 +18,7 @@ export function EditNote() {
   });
   let { noteid } = useParams();
   useEffect(() => {
-    fetch("https://taskivist.onrender.com//notes/" + noteid, { method: "GET" }).then(
+    fetch("https://taskivist.onrender.com/notes/" + noteid, { method: "GET" }).then(
       (resp) => {
         {
           resp.json().then((data) => {
