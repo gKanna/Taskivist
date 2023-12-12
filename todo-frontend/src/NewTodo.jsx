@@ -77,7 +77,7 @@ function NewTodo() {
                 resp.json().then((data) => {
                   console.log(data);
                   alert("Todo Added successfully");
-                  window.location.reload();
+                  navigate("/")
                 });
               });
             }}
