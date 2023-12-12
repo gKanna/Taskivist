@@ -18,7 +18,7 @@ export function EditTodo() {
   });
   let { todoid } = useParams();
   useEffect(() => {
-    fetch("http://localhost:3000/todos/" + todoid, { method: "GET" }).then(
+    fetch("taskivist-api.vercel.app/todos/" + todoid, { method: "GET" }).then(
       (resp) => {
         {
           resp.json().then((data) => {
@@ -77,7 +77,7 @@ export function EditTodo() {
                 <StyledButton
                   variant="contained"
                   onClick={() => {
-                    fetch("http://localhost:3000/todos/" + props.todo.id, {
+                    fetch("taskivist-api.vercel.app/todos/" + props.todo.id, {
                       method: "PUT",
                       headers: {
                         "Content-Type": "application/json",
