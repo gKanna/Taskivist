@@ -10,7 +10,7 @@ export function Notelist() {
   const [notes, setNotes] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:3000/notes", { method: "GET" }).then((resp) => {
+    fetch("taskivist-api.vercel.app/notes", { method: "GET" }).then((resp) => {
       {
         resp.json().then((data) => {
           console.log(data);
@@ -61,7 +61,7 @@ export function Notelist() {
               <Button
                 variant="contained"
                 onClick={() => {
-                  fetch(`http://localhost:3000/notes/${id}`, {
+                  fetch(`taskivist-api.vercel.app/notes/${id}`, {
                     method: "DELETE",
                   });
                   alert("Note deleted successfully ");
