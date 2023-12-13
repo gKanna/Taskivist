@@ -19,43 +19,49 @@ export function Homepage() {
     <div style={{ display: "flex", marginBottom: "110px" }}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Card
-            sx={{ color: "#EEE7DA" }}
-            style={{
-               marginTop: "50px",
+          <center>
+            <Card
+              sx={{ color: "#EEE7DA" }}
+              style={{
+                marginTop: "50px",
                 marginLeft: "60px",
                 marginRight: "50px",
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: "#393E46",
-                padding: "20px",
+                // width: "60%",
+                backdropfilter: blur("8px"),
               }}
             >
-              <center>
-                <Typography variant="h4" color={"White"}>
-                  To-Do
-                </Typography>
-                <StyledButton
-                  variant="contained"
-                  onClick={() => {
-                    navigate("/todo/addtodo");
-                  }}
-                >
-                  Add Todo
-                </StyledButton>
-                <Todolist></Todolist>
-              </center>
-            </div>
-          </Card>
+              <div
+                style={{
+                  backgroundColor: "#393E46",
+                  padding: "20px",
+                }}
+              >
+                <center>
+                  <Typography variant="h4" color={"White"}>
+                    To-Do
+                  </Typography>
+                  <StyledButton
+                    variant="contained"
+                    onClick={() => {
+                      navigate("/todo/addtodo");
+                    }}
+                  >
+                    Add Todo
+                  </StyledButton>
+                  <Todolist></Todolist>
+                </center>
+              </div>
+            </Card>
+          </center>
         </Grid>
         <Grid item xs={12} md={6}>
           <Card
             style={{
               marginTop: "50px",
-                marginLeft: "60px",
-                marginRight: "50px",
+              marginLeft: "60px",
+              marginRight: "50px",
+              // width: "600px",
+              backdropfilter: blur("8px"),
             }}
           >
             <div
