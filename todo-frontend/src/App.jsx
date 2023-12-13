@@ -51,11 +51,13 @@ function App() {
             <img
               src="\WhatsApp_Image_2023-12-12_at_12.05.22_bb56d0b9-removebg-preview.png"
               alt=""
-              style={{ height: "10 0px",
+              style={{
+                height: "10 0px",
                 position: "relative",
                 top: "10px",
                 left: "20px",
-                width: "100px" }}
+                width: "100px",
+              }}
             />
           </div>
           <div>
@@ -71,6 +73,7 @@ function App() {
             </Typography>
           </div>
         </div>
+
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/todo/addtodo" element={<NewTodo />} />
@@ -78,7 +81,6 @@ function App() {
           <Route path="/note/newnote" element={<NewNote />} />
           <Route path="/note/:noteid" element={<EditNote />} />
         </Routes>
-        
       </BrowserRouter>
       <footer
         style={{
