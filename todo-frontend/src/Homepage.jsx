@@ -16,7 +16,7 @@ export function Homepage() {
     },
   });
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", marginBottom: "110px" }}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Card
