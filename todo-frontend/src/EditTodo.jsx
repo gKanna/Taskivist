@@ -5,10 +5,11 @@ import { useNavigate } from "react-router-dom";
 import Card from "@mui/material/node/Card";
 import { useState, useEffect } from "react";
 import Styled from "@emotion/styled";
-
+//Edit Todo component
 export function EditTodo() {
   const [todo, setTodo] = useState([]);
   const navigate = useNavigate();
+  //Mui button styling
   const StyledButton = Styled(Button)({
     background: "#00ADB5",
     textTransform: "none",
@@ -17,6 +18,7 @@ export function EditTodo() {
     },
   });
   let { todoid } = useParams();
+  //fetching a specific todo from server
   useEffect(() => {
     fetch("https://taskivist.onrender.com/todos/" + todoid, { method: "GET" }).then(
       (resp) => {
@@ -38,7 +40,9 @@ export function EditTodo() {
   function UpdateCard(props) {
     const [title, setTitle] = useState(props.todo.title);
     const [description, setDescription] = useState(props.todo.description);
+
     return (
+      //Button to return to homepage
       <div>
         <StyledButton
           variant="contained"
@@ -49,13 +53,19 @@ export function EditTodo() {
         >
           Back to Dashboard
         </StyledButton>
+        
+        //Edit todo card
         <div style={{ paddingTop: "100px" }}>
           <center>
             <Card style={{ width: "400px" }}>
+              
               <div style={{ backgroundColor: "#EEEEEE", padding: "10px" }}>
+                //Heading 
                 <Typography variant="h4" color={"Black"}>
                   Edit Todo
                 </Typography>
+                
+                //Edit Todo title
                 <TextField
                   label="Title"
                   variant="filled"
@@ -65,6 +75,8 @@ export function EditTodo() {
                   onChange={(e) => setTitle(e.target.value)}
                 />
                 <br />
+
+                //Edit todo Description 
                 <TextField
                   label="Description"
                   variant="filled"
@@ -74,6 +86,8 @@ export function EditTodo() {
                   defaultValue={todo.description}
                   onChange={(e) => setDescription(e.target.value)}
                 />
+
+                //Save edit Button
                 <StyledButton
                   variant="contained"
                   onClick={() => {
