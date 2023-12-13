@@ -43,7 +43,7 @@ function NewNote() {
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         {/* Card */}
-        <Card style={{ width: "800px", padding: "20px" }}>
+        <Card style={{ width: "800px",marginBottom:"70px", padding: "20px" }}>
           <TextField
             id="outlined-basic"
             label="Title"
