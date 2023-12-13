@@ -35,8 +35,8 @@ function App() {
     <div
       style={{
         margin: "0px",
-        height: "100vh",
-        width: "100vw",
+        // height: "100vh",
+        // width: "100vw",
       }}
     >
       <BrowserRouter>
