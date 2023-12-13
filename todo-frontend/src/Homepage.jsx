@@ -16,47 +16,51 @@ export function Homepage() {
     },
   });
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div style={{ display: "flex" }}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Card
-            sx={{ color: "#EEE7DA" }}
-            style={{
-              marginTop: "100px",
-              marginLeft: "100px",
-              width: "600px",
-              backdropfilter: blur("8px"),
-            }}
-          >
-            <div
+          <center>
+            <Card
+              sx={{ color: "#EEE7DA" }}
               style={{
-                backgroundColor: "#393E46",
-                padding: "20px",
+                marginTop: "50px",
+                marginLeft: "60px",
+                marginRight: "50px",
+                // width: "60%",
+                backdropfilter: blur("8px"),
               }}
             >
-              <center>
-                <Typography variant="h4" color={"White"}>
-                  To-Do
-                </Typography>
-                <StyledButton
-                  variant="contained"
-                  onClick={() => {
-                    navigate("/todo/addtodo");
-                  }}
-                >
-                  Add Todo
-                </StyledButton>
-                <Todolist></Todolist>
-              </center>
-            </div>
-          </Card>
+              <div
+                style={{
+                  backgroundColor: "#393E46",
+                  padding: "20px",
+                }}
+              >
+                <center>
+                  <Typography variant="h4" color={"White"}>
+                    To-Do
+                  </Typography>
+                  <StyledButton
+                    variant="contained"
+                    onClick={() => {
+                      navigate("/todo/addtodo");
+                    }}
+                  >
+                    Add Todo
+                  </StyledButton>
+                  <Todolist></Todolist>
+                </center>
+              </div>
+            </Card>
+          </center>
         </Grid>
         <Grid item xs={12} md={6}>
           <Card
             style={{
-              marginTop: "100px",
-              marginLeft: "100px",
-              width: "600px",
+              marginTop: "50px",
+              marginLeft: "60px",
+              marginRight: "50px",
+              // width: "600px",
               backdropfilter: blur("8px"),
             }}
           >
