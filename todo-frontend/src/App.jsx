@@ -13,8 +13,9 @@ import NewNote from "./NewNote.jsx";
 import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import LinearProgress from "@mui/material/LinearProgress";
-
+//App component 
 function App() {
+  //Loading control variable
   const [Loading, SetLoading] = useState(false);
   useEffect(() => {
     SetLoading(true);
@@ -22,6 +23,7 @@ function App() {
       SetLoading(false);
     }, 1000);
   }, []);
+  //loading animation in landing
   if (Loading) {
     return (
       <div style={{ width: "100vw" }}>
@@ -32,14 +34,15 @@ function App() {
     );
   }
   return (
+    //main div
     <div
       style={{
         margin: "0px",
-        // height: "100vh",
-        // width: "100vw",
       }}
     >
+      //Routing multiple routes using react router dom
       <BrowserRouter>
+        //App logo and name div
         <div
           style={{
             display: "flex",
@@ -73,7 +76,7 @@ function App() {
             </Typography>
           </div>
         </div>
-
+        //Route Management
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/todo/addtodo" element={<NewTodo />} />
@@ -82,6 +85,8 @@ function App() {
           <Route path="/note/:noteid" element={<EditNote />} />
         </Routes>
       </BrowserRouter>
+
+      //Footer content
       <footer
         style={{
           backgroundColor: "#393e46" /* Darker footer background color */,
