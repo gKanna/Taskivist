@@ -78,6 +78,20 @@ function App() {
           <Route path="/note/newnote" element={<NewNote />} />
           <Route path="/note/:noteid" element={<EditNote />} />
         </Routes>
+        <footer
+        style={{
+          backgroundColor: "#393e46" /* Darker footer background color */,
+          padding: "20px",
+          textAlign: "center",
+          position: "absolute",
+          bottom: "0",
+          width: "100vw",
+        }}
+      >
+        <p style={{ fontFamily: [" Arial", "sans-serif"], color: "#ffffff" }}>
+          &copy; 2023 Taskivist <br />
+        </p>
+      </footer>
       </BrowserRouter>
     </div>
   );
