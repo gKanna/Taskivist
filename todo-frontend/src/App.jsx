@@ -87,7 +87,7 @@ function App() {
           backgroundColor: "#393e46" /* Darker footer background color */,
           padding: "20px",
           textAlign: "center",
-          position: "absolute",
+          position: "fixed",
           bottom: "0",
           width: "100vw",
         }}
