@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { Notelist } from "./Notelist";
 import Styled from "@emotion/styled";
+
+//Homepage Component
 export function Homepage() {
   const navigate = useNavigate();
   const StyledButton = Styled(Button)({
@@ -16,10 +18,13 @@ export function Homepage() {
     },
   });
   return (
+    //main Div holding grid 
     <div style={{ display: "flex", marginBottom: "110px" }}>
       <Grid container spacing={2}>
+        //Todo Card grid Item
         <Grid item xs={12} md={6}>
           <center>
+            //Todo card
             <Card
               sx={{ color: "#EEE7DA" }}
               style={{
@@ -40,6 +45,8 @@ export function Homepage() {
                   <Typography variant="h4" color={"White"}>
                     To-Do
                   </Typography>
+                  
+                  //Add todo Button
                   <StyledButton
                     variant="contained"
                     onClick={() => {
@@ -48,13 +55,16 @@ export function Homepage() {
                   >
                     Add Todo
                   </StyledButton>
+                  //display TodoList Component
                   <Todolist></Todolist>
                 </center>
               </div>
             </Card>
           </center>
         </Grid>
+        //Note card grid item
         <Grid item xs={12} md={6}>
+          //Note card
           <Card
             style={{
               marginTop: "50px",
@@ -74,6 +84,8 @@ export function Homepage() {
                 <Typography variant="h4" color={"#F9F7F7"}>
                   Notes
                 </Typography>
+
+                //New note Button
                 <StyledButton
                   variant="contained"
                   onClick={() => {
@@ -83,6 +95,7 @@ export function Homepage() {
                 >
                   New Note
                 </StyledButton>
+                // Display NoteList component 
                 <Notelist></Notelist>
               </center>
             </div>
