@@ -105,7 +105,7 @@ function App() {
         </footer>
       </BrowserRouter>
       //Footer content
-      <footer
+{/*       <footer
         style={{
           backgroundColor: "#393e46" /* Darker footer background color */,
           padding: "20px",
@@ -118,7 +118,7 @@ function App() {
         <p style={{ fontFamily: [" Arial", "sans-serif"], color: "#ffffff" }}>
           &copy; 2023 Taskivist <br />
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
