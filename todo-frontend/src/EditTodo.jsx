@@ -60,7 +60,7 @@ export function EditTodo() {
             <Card style={{ width: "400px" }}>
               
               <div style={{ backgroundColor: "#EEEEEE", padding: "10px" }}>
-                //Heading 
+                
                 <Typography variant="h4" color={"Black"}>
                   Edit Todo
                 </Typography>
