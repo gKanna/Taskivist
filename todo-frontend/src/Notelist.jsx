@@ -65,7 +65,7 @@ export function Notelist() {
                     method: "DELETE",
                   });
                   alert("Note deleted successfully ");
-                  window.location.reload();
+                  navigate(0)
                 }}
                 color="error"
                 style={{ marginLeft: "5px" }}
