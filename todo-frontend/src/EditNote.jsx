@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import Styled from "@emotion/styled";
 //EditNote component
 export function EditNote() {
-  //note variable with state management
+  // note variable with state management
   const [note, setNote] = useState([]);
   const navigate = useNavigate();
   //Mui Button Styling
@@ -33,7 +33,7 @@ export function EditNote() {
   }, []);
 
   return (
-    //Edit note card
+    // Edit note card
     <div>
       <UpdateCard note={note}></UpdateCard>
     </div>
@@ -44,7 +44,7 @@ export function EditNote() {
     const [description, setDescription] = useState(props.note.description);
     return (
       <div>
-        //Button to goto homepage
+{/*         //Button to goto homepage */}
         <StyledButton
           variant="contained"
           style={{ margin: "20px 20px" }}
@@ -55,13 +55,13 @@ export function EditNote() {
           Back
         </StyledButton>
         
-        //Edit note card
+{/*         //Edit note card */}
         <div style={{ paddingTop: "100px" }}>
           <center>
             <Card style={{ width: "400px" }}>
               <div style={{ backgroundColor: "#EEEEEE", padding: "10px" }}>
 
-                //Edit Note Title
+{/*                 //Edit Note Title */}
                 <TextField
                   variant="standard"
                   defaultValue={note.title}
@@ -70,7 +70,7 @@ export function EditNote() {
                 />
                 <br />
 
-                //Edit note description
+{/*                 //Edit note description */}
                 <TextareaAutosize
                   label="Description"
                   fullWidth
@@ -81,7 +81,7 @@ export function EditNote() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
 
-                //Save edit button
+{/*                 //Save edit button */}
                 <StyledButton
                   variant="contained"
                   onClick={() => {
