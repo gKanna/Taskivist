@@ -65,7 +65,7 @@ function Todolist() {
                     method: "DELETE",
                   });
                   alert("Todo deleted successfully ");
-                  window.location.reload();
+                  navigate("/todos")
                 }}
                 color="error"
                 style={{ marginLeft: "5px" }}
