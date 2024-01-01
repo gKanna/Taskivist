@@ -10,7 +10,7 @@ function Todolist() {
   const [todos, setTodos] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:3000/todos", { method: "GET" }).then((resp) => {
+    fetch("https://taskivist.onrender.com/todos", { method: "GET" }).then((resp) => {
       {
         resp.json().then((data) => {
           console.log(data);
@@ -61,7 +61,7 @@ function Todolist() {
               <Button
                 variant="contained"
                 onClick={() => {
-                  fetch(`http://localhost:3000/todos/${id}`, {
+                  fetch(`https://taskivist.onrender.com/todos/${id}`, {
                     method: "DELETE",
                   });
                   alert("Todo deleted successfully ");

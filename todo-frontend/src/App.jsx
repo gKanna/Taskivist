@@ -17,6 +17,7 @@ import { Todos } from "./Todos.jsx";
 import { Notes } from "./Notes.jsx";
 
 function App() {
+  //Loading control variable
   const [Loading, SetLoading] = useState(false);
   useEffect(() => {
     SetLoading(true);
@@ -24,6 +25,7 @@ function App() {
       SetLoading(false);
     }, 1000);
   }, []);
+  //loading animation in landing
   if (Loading) {
     return (
       <div style={{ width: "100vw" }}>
@@ -34,6 +36,7 @@ function App() {
     );
   }
   return (
+    //main div
     <div
       style={{
         margin: "0px",
@@ -41,7 +44,9 @@ function App() {
         // width: "100vw",
       }}
     >
+      //Routing multiple routes using react router dom
       <BrowserRouter>
+        //App logo and name div
         <div
           style={{
             display: "flex",
@@ -75,7 +80,6 @@ function App() {
             </Typography>
           </div>
         </div>
-
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/todos" element={<Todos />} />
@@ -100,6 +104,21 @@ function App() {
           </p>
         </footer>
       </BrowserRouter>
+      //Footer content
+      <footer
+        style={{
+          backgroundColor: "#393e46" /* Darker footer background color */,
+          padding: "20px",
+          textAlign: "center",
+          position: "fixed",
+          bottom: "0",
+          width: "100vw",
+        }}
+      >
+        <p style={{ fontFamily: [" Arial", "sans-serif"], color: "#ffffff" }}>
+          &copy; 2023 Taskivist <br />
+        </p>
+      </footer>
     </div>
   );
 }

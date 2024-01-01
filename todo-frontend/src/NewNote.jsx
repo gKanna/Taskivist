@@ -71,7 +71,7 @@ function NewNote() {
             variant="contained"
             fullWidth
             onClick={() => {
-              fetch("http://localhost:3000/notes", {
+              fetch("https://taskivist.onrender.com/notes", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

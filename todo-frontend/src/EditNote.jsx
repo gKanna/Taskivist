@@ -5,10 +5,12 @@ import { useNavigate } from "react-router-dom";
 import Card from "@mui/material/node/Card";
 import { useState, useEffect } from "react";
 import Styled from "@emotion/styled";
-
+//EditNote component
 export function EditNote() {
+  //note variable with state management
   const [note, setNote] = useState([]);
   const navigate = useNavigate();
+  //Mui Button Styling
   const StyledButton = Styled(Button)({
     background: "#00ADB5",
     textTransform: "none",
@@ -17,8 +19,9 @@ export function EditNote() {
     },
   });
   let { noteid } = useParams();
+  //Fetching a specific note from server
   useEffect(() => {
-    fetch("http://localhost:3000/notes/" + noteid, { method: "GET" }).then(
+    fetch("https://taskivist.onrender.com/notes/" + noteid, { method: "GET" }).then(
       (resp) => {
         {
           resp.json().then((data) => {
@@ -30,6 +33,7 @@ export function EditNote() {
   }, []);
 
   return (
+    //Edit note card
     <div>
       <UpdateCard note={note}></UpdateCard>
     </div>
@@ -40,6 +44,7 @@ export function EditNote() {
     const [description, setDescription] = useState(props.note.description);
     return (
       <div>
+        //Button to goto homepage
         <StyledButton
           variant="contained"
           style={{ margin: "20px 20px" }}
@@ -49,13 +54,14 @@ export function EditNote() {
         >
           Back
         </StyledButton>
+        
+        //Edit note card
         <div style={{ paddingTop: "100px" }}>
           <center>
             <Card style={{ width: "400px" }}>
               <div style={{ backgroundColor: "#EEEEEE", padding: "10px" }}>
-                {/* <Typography variant="h4" color={"white"}>
-                  Edit Note
-                </Typography> */}
+
+                //Edit Note Title
                 <TextField
                   variant="standard"
                   defaultValue={note.title}
@@ -63,6 +69,8 @@ export function EditNote() {
                   onChange={(e) => setTitle(e.target.value)}
                 />
                 <br />
+
+                //Edit note description
                 <TextareaAutosize
                   label="Description"
                   fullWidth
@@ -72,10 +80,12 @@ export function EditNote() {
                   defaultValue={note.description}
                   onChange={(e) => setDescription(e.target.value)}
                 />
+
+                //Save edit button
                 <StyledButton
                   variant="contained"
                   onClick={() => {
-                    fetch("http://localhost:3000/notes/" + props.note.id, {
+                    fetch("https://taskivist.onrender.com/notes/" + props.note.id, {
                       method: "PUT",
                       headers: {
                         "Content-Type": "application/json",

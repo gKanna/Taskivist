@@ -5,6 +5,8 @@ import { Typography } from "@mui/material";
 import Button from "@mui/material/node/Button";
 import { Notelist } from "./Notelist";
 import Styled from "@emotion/styled";
+
+//Homepage Component
 export function Homepage() {
   const navigate = useNavigate();
   const StyledButton = Styled(Button)({
