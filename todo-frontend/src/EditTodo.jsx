@@ -42,7 +42,7 @@ export function EditTodo() {
     const [description, setDescription] = useState(props.todo.description);
 
     return (
-      //Button to return to homepage
+      // Button to return to homepage
       <div>
         <StyledButton
           variant="contained"
@@ -54,7 +54,7 @@ export function EditTodo() {
           Back
         </StyledButton>
         
-        //Edit todo card
+{/*         // Edit todo card */}
         <div style={{ paddingTop: "100px" }}>
           <center>
             <Card style={{ width: "400px" }}>
@@ -65,7 +65,7 @@ export function EditTodo() {
                   Edit Todo
                 </Typography>
                 
-                //Edit Todo title
+{/*                 //Edit Todo title */}
                 <TextField
                   label="Title"
                   variant="filled"
@@ -76,7 +76,7 @@ export function EditTodo() {
                 />
                 <br />
 
-                //Edit todo Description 
+{/*                 //Edit todo Description  */}
                 <TextField
                   label="Description"
                   variant="filled"
@@ -87,7 +87,7 @@ export function EditTodo() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
 
-                //Save edit Button
+{/*                 //Save edit Button */}
                 <StyledButton
                   variant="contained"
                   onClick={() => {
