@@ -53,7 +53,7 @@ export function Notelist() {
                 variant="contained"
                 onClick={() => {
                   //   console.log("Note id :", note.id);
-                  navigate("/note/" + note.id);
+                  navigate("/notes/" + note.id);
                 }}
               >
                 <EditIcon></EditIcon>

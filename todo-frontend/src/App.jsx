@@ -13,6 +13,8 @@ import NewNote from "./NewNote.jsx";
 import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import LinearProgress from "@mui/material/LinearProgress";
+import { Todos } from "./Todos.jsx";
+import { Notes } from "./Notes.jsx";
 
 function App() {
   const [Loading, SetLoading] = useState(false);
@@ -35,8 +37,8 @@ function App() {
     <div
       style={{
         margin: "0px",
-        height: "100vh",
-        width: "100vw",
+        // height: "100vh",
+        // width: "100vw",
       }}
     >
       <BrowserRouter>
@@ -73,13 +75,30 @@ function App() {
             </Typography>
           </div>
         </div>
+
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/todo/addtodo" element={<NewTodo />} />
-          <Route path="/todo/:todoid" element={<EditTodo />} />
-          <Route path="/note/newnote" element={<NewNote />} />
-          <Route path="/note/:noteid" element={<EditNote />} />
+          <Route path="/todos" element={<Todos />} />
+          <Route path="/notes" element={<Notes />} />
+          <Route path="/todos/addtodo" element={<NewTodo />} />
+          <Route path="/todos/:todoid" element={<EditTodo />} />
+          <Route path="/notes/newnote" element={<NewNote />} />
+          <Route path="/notes/:noteid" element={<EditNote />} />
         </Routes>
+        <footer
+          style={{
+            backgroundColor: "#393e46" /* Darker footer background color */,
+            padding: "20px",
+            textAlign: "center",
+            position: "fixed",
+            bottom: "0",
+            width: "100vw",
+          }}
+        >
+          <p style={{ fontFamily: [" Arial", "sans-serif"], color: "#ffffff" }}>
+            &copy; 2023 Taskivist <br />
+          </p>
+        </footer>
       </BrowserRouter>
     </div>
   );

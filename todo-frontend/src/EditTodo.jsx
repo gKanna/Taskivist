@@ -44,10 +44,10 @@ export function EditTodo() {
           variant="contained"
           style={{ margin: "20px 20px" }}
           onClick={() => {
-            navigate("/");
+            navigate("/todos");
           }}
         >
-          Back to Dashboard
+          Back
         </StyledButton>
         <div style={{ paddingTop: "100px" }}>
           <center>
@@ -90,6 +90,7 @@ export function EditTodo() {
                       res.json().then((data) => {
                         alert("Todo Updated Succesfully");
                         console.log(data);
+                        navigate("/todos");
                       });
                     });
                   }}

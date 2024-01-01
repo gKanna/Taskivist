@@ -53,7 +53,7 @@ function Todolist() {
                 variant="contained"
                 onClick={() => {
                   console.log("Todo id :", todo.id);
-                  navigate("/todo/" + todo.id);
+                  navigate("/todos/" + todo.id);
                 }}
               >
                 <EditIcon></EditIcon>

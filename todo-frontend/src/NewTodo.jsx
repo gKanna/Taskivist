@@ -23,10 +23,10 @@ function NewTodo() {
         variant="contained"
         style={{ margin: "20px 20px" }}
         onClick={() => {
-          navigate("/");
+          navigate("/todos");
         }}
       >
-        Back to Dashboard
+        Back
       </StyledButton>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Typography
@@ -77,7 +77,7 @@ function NewTodo() {
                 resp.json().then((data) => {
                   console.log(data);
                   alert("Todo Added successfully");
-                  window.location.reload();
+                  navigate("/todos");
                 });
               });
             }}

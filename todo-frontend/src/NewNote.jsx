@@ -25,10 +25,10 @@ function NewNote() {
         variant="contained"
         style={{ margin: "20px 20px" }}
         onClick={() => {
-          navigate("/");
+          navigate("/notes");
         }}
       >
-        Back to Dashboard
+        Back
       </StyledButton>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Typography
@@ -43,7 +43,7 @@ function NewNote() {
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         {/* Card */}
-        <Card style={{ width: "800px", padding: "20px" }}>
+        <Card style={{ width: "700px", marginBottom: "70px", padding: "20px" }}>
           <TextField
             id="outlined-basic"
             label="Title"
@@ -55,7 +55,6 @@ function NewNote() {
           <br />
           <br />
           <TextareaAutosize
-            fullWidth
             label="Note"
             Textarea
             style={{ width: "100%" }}
@@ -83,7 +82,7 @@ function NewNote() {
                 resp.json().then((data) => {
                   console.log(data);
                   alert("Note Added successfully");
-                  window.location.reload();
+                  navigate("/notes");
                 });
               });
             }}

@@ -44,10 +44,10 @@ export function EditNote() {
           variant="contained"
           style={{ margin: "20px 20px" }}
           onClick={() => {
-            navigate("/");
+            navigate("/notes");
           }}
         >
-          Back to Dashboard
+          Back
         </StyledButton>
         <div style={{ paddingTop: "100px" }}>
           <center>
@@ -88,6 +88,7 @@ export function EditNote() {
                       res.json().then((data) => {
                         alert("Note Updated Succesfully");
                         console.log(data);
+                        navigate("/notes");
                       });
                     });
                   }}
